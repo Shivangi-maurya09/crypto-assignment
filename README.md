@@ -1,55 +1,78 @@
 🚀 Crypto Market Data MCP Server
 
-A simple Python-based MCP server and frontend dashboard that fetches real-time and historical cryptocurrency data using public APIs.
+A Python-based backend + frontend system that fetches real-time and historical cryptocurrency data using public APIs.
+Includes a lightweight dashboard built with HTML, CSS, and JavaScript.
 
-📌 Features
-🔹 Backend (Flask + CCXT)
+🔥 Features
+🖥️ Backend (Flask + CCXT)
 
 /ping → Server health check
 
-/price?symbol=BTC → Real-time crypto price
+/price?symbol=BTC → Real-time cryptocurrency price
 
-/history?symbol=BTC → Last 24 hours historical OHLCV data
+/history?symbol=BTC → Last 24 hours OHLCV historical data
 
-Caching implemented using cachetools
+In-memory caching using cachetools
 
-Fully structured services + utils architecture
+Clean architecture with services + utils modules
 
-Included pytest tests for API validation
+Integrated pytest tests for API validation
 
-🔹 Frontend (HTML + CSS + JavaScript)
+🎨 Frontend (HTML + CSS + JavaScript)
 
-A simple crypto dashboard with:
+Modern UI crypto dashboard
 
 Dropdown to select coin (BTC, ETH, BNB, SOL)
 
-Shows live price
+Displays:
 
-Displays a 24-hour chart using Chart.js
+Live price
 
-Fetches data from the Flask backend APIs
+24-hour chart (Chart.js)
 
-📁 Project Structure
+Automatically fetches data from backend APIs
+
+📂 Folder Structure
 crypto-assignment/
-│
-├── backend/
+│── backend/
 │   ├── app.py
-│   ├── requirements.txt
 │   ├── services/
-│   │     ├── realtime.py
-│   │     ├── history.py
+│   │   ├── realtime.py
+│   │   └── history.py
 │   ├── utils/
-│   │     ├── cache.py
-│   │     ├── error_handler.py
+│   │   ├── cache.py
+│   │   └── error_handler.py
 │   ├── tests/
-│         ├── test_app.py
+│   │   └── test_app.py
+│   └── requirements.txt
 │
-└── frontend/
-    ├── index.html
-    ├── style.css
-    ├── script.js
+│── frontend/
+│   ├── index.html
+│   ├── script.js
+│   └── style.css
+│
+└── README.md
 
-⚙️ Technologies Used
+⚙️ How to Run the Project
+▶️ 1. Backend Setup
+cd backend
+pip install -r requirements.txt
+python app.py
+
+
+Backend will start on:
+👉 http://127.0.0.1:5000
+
+▶️ 2. Frontend Setup
+
+Simply open this file in your browser:
+
+frontend/index.html
+
+
+No server required.
+
+🛠️ Tech Stack
 Backend
 
 Python
@@ -59,6 +82,8 @@ Flask
 CCXT
 
 Cachetools
+
+Requests
 
 Pytest
 
@@ -72,39 +97,17 @@ JavaScript
 
 Chart.js
 
-▶️ How to Run the Backend
-
-Open terminal inside /backend
-
-Install dependencies:
-
-pip install -r requirements.txt
-
-
-Run server:
-
-python app.py
-
-
-Server runs at:
-👉 http://127.0.0.1:5000
-
-▶️ Useful Backend Endpoints
+🌟 API Endpoints
 Endpoint	Description
-/ping	Server check
+/ping	Health check
 /price?symbol=BTC	Real-time price
-/history?symbol=BTC	24h OHLCV data
-▶️ How to Run the Frontend
+/history?symbol=BTC	24h OHLCV history
+💡 Highlights
 
-Just open:
+Clean project architecture
 
-frontend/index.html
+Easy to run and extend
 
+Suitable for learning backend + API integration
 
-It will fetch data automatically from the running backend.
-
-🧪 Tests
-
-To run unit tests:
-
-pytest backend
+Minimalistic crypto dashboard with real data
