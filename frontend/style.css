@@ -1,0 +1,51 @@
+body {
+    margin: 0;
+    background: #1a1a1a;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+.container {
+    width: 90%;
+    max-width: 600px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #00eaff;
+}
+
+.controls {
+    margin-bottom: 20px;
+}
+
+select {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 8px;
+    outline: none;
+}
+
+.card {
+    background: #222;
+    padding: 20px;
+    border-radius: 14px;
+    margin-bottom: 30px;
+    box-shadow: 0 0 10px #00eaff55;
+}
+
+#price {
+    font-size: 38px;
+    font-weight: bold;
+    color: #00ff9d;
+}
+
+canvas {
+    margin-top: 20px;
+    background: #111;
+    padding: 10px;
+    border-radius: 10px;
+}
